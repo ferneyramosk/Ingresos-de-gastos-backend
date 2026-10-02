@@ -51,7 +51,7 @@ def delete_data(id:int):
     conexionDelete.con.close() 
 
 def mostrar_ingresos():
-    conexionIngreso = Conexion('SELECT sum(quantity) FROM movimiento WHERE quantity>0;')
+    conexionIngreso = Conexion('SELECT sum(quantity) FROM movimiento WHERE quantity>0;') # Codigo de sql , se conecta para ejecutarlo
     respuesta = conexionIngreso.res.fetchone()
     conexionIngreso.con.close()
     if respuesta and respuesta[0] is not None:
